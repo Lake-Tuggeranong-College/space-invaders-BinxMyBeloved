@@ -1,9 +1,10 @@
 extends KinematicBody2D
 var bulletSource = preload ("res://Bullet/Bullet.tscn")
-
+var movement_speed = 240
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	set_process(true)
+	set_physics_process(true)
 	pass # replace with function body
 
 
@@ -13,3 +14,9 @@ func _process(delta):
 		var bulletInstance = bulletSource.instance()
 		bulletInstance.position = Vector2(position.x, position.y-45)
 		get_tree().get_root().add_child(bulletInstance)
+
+func _physics_process(delta):
+	if Input.is_action_pressed("ui_left"):
+		move_and_collide(Vector2(-movement_speed * delta, 0))
+	if Input.is_action_pressed("ui_right"):
+		move_and_collide(Vector2(movement_speed * delta, 0))
