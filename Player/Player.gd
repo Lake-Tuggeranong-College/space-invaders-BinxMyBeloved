@@ -11,9 +11,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("fire"):
-		var bulletInstance = bulletSource.instance()
-		bulletInstance.position = Vector2(position.x, position.y-45)
-		get_tree().get_root().add_child(bulletInstance)
+		if GlobalVariables.bulletInstanceCount < 3:
+			var bulletInstance = bulletSource.instance()
+			bulletInstance.position = Vector2(position.x, position.y-45)
+			get_tree().get_root().add_child(bulletInstance)
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_left"):
