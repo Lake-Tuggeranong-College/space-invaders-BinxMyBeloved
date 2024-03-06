@@ -42,9 +42,8 @@ text = "Current Score"
 [node name="CurrentScore" type="Label" parent="HUD"]
 margin_left = 94.0
 margin_top = 13.0
-margin_right = 102.0
+margin_right = 94.0
 margin_bottom = 27.0
-text = "0"
 
 [node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
