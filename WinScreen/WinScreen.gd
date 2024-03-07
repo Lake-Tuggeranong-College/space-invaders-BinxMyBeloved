@@ -1,5 +1,6 @@
 extends Node
 func _ready():
+	#call save data function?
 	# Sorts the array
 	GlobalVariables.scoringInformation["highScores"].sort()
 	
@@ -15,3 +16,16 @@ func _ready():
 	
 	# Debugging.
 	print(GlobalVariables.scoringInformation["highScores"])
+
+func _on_MenuDirect_button_up():
+	get_tree().change_scene("res://Menu/Menu.tscn")
+	
+func saveData():
+	var file = File.new()
+	var error = file.open(GlobalVariables.saveFile, file.WRITE)
+	if error == OK:
+		file.store_var(GlobalVariables.scoringInformation)
+		file.close()
+		print("!!Data Saved!!")
+	else :
+		print("!!Data Not Saved!!")

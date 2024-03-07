@@ -1,3 +1,23 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://WinScreen/MenuDirect.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="MenuDirect" type="Button" parent="."]
+margin_left = 423.0
+margin_top = 534.0
+margin_right = 898.0
+margin_bottom = 635.0
+script = ExtResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 243.0
+margin_top = 231.0
+margin_right = 1120.0
+margin_bottom = 367.0
+tab_size = 6
+text = "win :)
+"
+
+[connection signal="button_up" from="MenuDirect" to="MenuDirect" method="_on_MenuDirect_button_up"]

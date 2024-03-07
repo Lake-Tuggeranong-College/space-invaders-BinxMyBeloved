@@ -17,7 +17,7 @@ func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
-		get_tree().change_scene("res://Menu/Menu.tscn")
+		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
