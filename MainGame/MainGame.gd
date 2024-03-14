@@ -18,6 +18,9 @@ func _process(delta):
 	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
+	if currentTimer < 0:
+		get_tree().change_scene("res://LoseScreen/LoseScreen.tsn")
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
