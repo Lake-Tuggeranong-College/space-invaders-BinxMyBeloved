@@ -9,7 +9,7 @@ func _ready():
 # Called when the node enters the scene tree for the first time.
 func _colliding(area):
 	if area.is_in_group("right"):
-		get_parent().glibal_position.y =+ 10
+		get_parent().global_position.y =+ 10
 		get_parent().speed = -200
 	if area.is_in_group("left"):
 		get_parent().global_position.y += 10
@@ -19,7 +19,7 @@ func _process(delta):
 #	while(true):
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
-	var my_random_number = rng.randf_range(1.0, 8.0)
+	var my_random_number = rng.randf_range(2.0, 30.0)
 	yield(get_tree().create_timer(my_random_number), "timeout")
 	if GlobalVariables.enemyBulletInstanceCount < 5:
 		var bulletInstance = bullet.instance()
