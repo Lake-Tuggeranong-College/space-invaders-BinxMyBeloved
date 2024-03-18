@@ -18,7 +18,6 @@ func _ready():
 
 func _on_Start_Game_Button_button_up():
 	get_tree().change_scene("res://MainGame/MainGame.tscn")
-	
 	var file = File.new()
 	if file.file_exists(GlobalVariables.saveFile):
 		var error = file.open(GlobalVariables.saveFile, File.READ)
@@ -27,3 +26,7 @@ func _on_Start_Game_Button_button_up():
 			file.close()
 			GlobalVariables.scoringInformation = player_data
 
+
+
+func _on_Options_button_down():
+	get_tree().change_scene("res://Options/OptionsMenu.tscn")

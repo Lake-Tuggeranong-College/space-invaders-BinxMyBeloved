@@ -99,4 +99,5 @@ margin_bottom = 14.0
 text = "Copyright Ryan Cather 2022."
 
 [connection signal="button_up" from="Layout/Main/Buttons/Start Game Button" to="." method="_on_Start_Game_Button_button_up"]
+[connection signal="button_down" from="Layout/Main/Buttons/Options" to="." method="_on_Options_button_down"]
 [connection signal="pressed" from="Layout/Main/Buttons/Quit" to="Layout/Main/Buttons/Quit" method="_on_Quit_pressed"]

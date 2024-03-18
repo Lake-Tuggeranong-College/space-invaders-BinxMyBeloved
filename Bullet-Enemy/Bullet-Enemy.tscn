@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.63879, 4.41854 )
 
-[node name="Bullet-enemy" type="KinematicBody2D"]
+[node name="Bullet-Enemy" type="KinematicBody2D"]
 position = Vector2( 193.956, 142.277 )
 script = ExtResource( 1 )
 

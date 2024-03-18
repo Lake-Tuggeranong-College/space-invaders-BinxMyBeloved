@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Options/OptionstoMenu.gd" type="Script" id=1]
+
+[node name="OptionsMenu" type="Node2D"]
+
+[node name="Layout" type="VBoxContainer" parent="."]
+margin_left = 456.0
+margin_top = 16.0
+margin_right = 644.0
+margin_bottom = 175.0
+
+[node name="RapidFireSelect" type="CheckButton" parent="Layout"]
+margin_right = 188.0
+margin_bottom = 40.0
+text = "Rapid Fire"
+
+[node name="OptionstoMenu" type="Button" parent="Layout"]
+margin_top = 44.0
+margin_right = 188.0
+margin_bottom = 64.0
+text = "Return to the Main Menu"
+script = ExtResource( 1 )
+
+[connection signal="button_down" from="Layout/OptionstoMenu" to="Layout/OptionstoMenu" method="_on_OptionstoMenu_button_down"]
