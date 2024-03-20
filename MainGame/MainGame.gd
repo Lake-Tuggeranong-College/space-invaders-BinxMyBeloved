@@ -13,13 +13,13 @@ func _ready():
 		currentTimer = currentTimer - 1
 		print(currentTimer)
 	print("Game Over")
+	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
+
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
-	if currentTimer < 0:
-		get_tree().change_scene("res://LoseScreen/LoseScreen.tsn")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

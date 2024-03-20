@@ -25,7 +25,10 @@ func _process(delta):
 		
 		bulletInstance.position = Vector2(global_position.x, global_position.y+20)
 		get_tree().get_root().add_child(bulletInstance)
-
+	
+#	if position.y = 700:
+	#	print("EnemyReached")
+	#	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
