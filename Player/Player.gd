@@ -29,3 +29,6 @@ func _physics_process(delta):
 	if Input. is_action_pressed("ui_down"):
 		if position.y < 640:
 			move_and_collide(Vector2(0, movement_speed * delta))
+	if Input.is_action_pressed("ui_cancel"):
+		GlobalVariables.scoringInformation["currentScore"] = 0
+		get_tree().change_scene("res://Menu/Menu.tscn")
