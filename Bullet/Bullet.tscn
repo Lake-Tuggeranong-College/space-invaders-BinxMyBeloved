@@ -18,5 +18,6 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 19.044, -1.27699 )
 stream = ExtResource( 3 )
 autoplay = true
