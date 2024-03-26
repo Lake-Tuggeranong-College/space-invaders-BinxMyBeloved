@@ -26,7 +26,5 @@ func _on_Start_Game_Button_button_up():
 			file.close()
 			GlobalVariables.scoringInformation = player_data
 
-
-
 func _on_Options_button_down():
 	get_tree().change_scene("res://Options/OptionsMenu.tscn")

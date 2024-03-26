@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 20
+var speed = 10
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
