@@ -22,4 +22,5 @@ margin_bottom = 64.0
 text = "Return to the Main Menu"
 script = ExtResource( 1 )
 
+[connection signal="button_down" from="Layout/RapidFireSelect" to="Layout/OptionstoMenu" method="_on_RapidFireSelect_button_down"]
 [connection signal="button_down" from="Layout/OptionstoMenu" to="Layout/OptionstoMenu" method="_on_OptionstoMenu_button_down"]

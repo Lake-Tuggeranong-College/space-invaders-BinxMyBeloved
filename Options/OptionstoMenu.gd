@@ -1,5 +1,5 @@
 extends Button
-
+var rapidfire = false
 
 # Declare member variables here. Examples:
 # var a = 2
