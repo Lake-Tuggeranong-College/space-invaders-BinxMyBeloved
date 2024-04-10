@@ -1,4 +1,4 @@
-extends Control
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -14,10 +14,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Start_Game_Button_button_up():
-	get_tree().change_scene("res://MainGame/MainGame.tscn")
+func _on_Lv2Direct_button_up():
+	get_tree().change_scene("res://Lv2/Lv2.tscn")
 	var file = File.new()
 	if file.file_exists(GlobalVariables.saveFile):
 		var error = file.open(GlobalVariables.saveFile, File.READ)
@@ -25,9 +23,3 @@ func _on_Start_Game_Button_button_up():
 			var player_data = file.get_var()
 			file.close()
 			GlobalVariables.scoringInformation = player_data
-
-func _on_Options_button_down():
-	get_tree().change_scene("res://Options/OptionsMenu.tscn")
-
-func _on_MapDirect_button_down():
-	get_tree().change_scene("res://Map/Map.tscn")

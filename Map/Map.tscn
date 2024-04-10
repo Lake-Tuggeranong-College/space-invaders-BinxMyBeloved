@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Map/MapDirects.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Lv2Direct" type="Button" parent="."]
+margin_left = 603.0
+margin_top = 542.0
+margin_right = 671.0
+margin_bottom = 579.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Lv2"
+
+[node name="Lv3Direct" type="Button" parent="."]
+margin_left = 375.0
+margin_top = 387.0
+margin_right = 443.0
+margin_bottom = 424.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Lv3"
+
+[node name="Lv4Direct" type="Button" parent="."]
+margin_left = 851.0
+margin_top = 381.0
+margin_right = 919.0
+margin_bottom = 418.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Lv4"
+
+[node name="Lv5Direct" type="Button" parent="."]
+margin_left = 603.0
+margin_top = 127.0
+margin_right = 671.0
+margin_bottom = 164.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Lv5"
+
+[node name="MaptoMenu" type="Button" parent="."]
+margin_left = 7.0
+margin_top = 652.0
+margin_right = 178.0
+margin_bottom = 689.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Return to the Main Menu"
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="Lv2Direct" to="MaptoMenu" method="_on_Lv2Direct_button_up"]
+[connection signal="button_up" from="Lv3Direct" to="MaptoMenu" method="_on_Lv3Direct_button_up"]
+[connection signal="button_down" from="MaptoMenu" to="MaptoMenu" method="_on_MaptoMenu_button_down"]
