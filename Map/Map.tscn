@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Map/MapDirects.gd" type="Script" id=1]
+[ext_resource path="res://Map/Map.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 
@@ -43,7 +43,7 @@ margin_right = 178.0
 margin_bottom = 689.0
 rect_scale = Vector2( 1.6, 1.6 )
 text = "Return to the Main Menu"
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [connection signal="button_up" from="Lv2Direct" to="MaptoMenu" method="_on_Lv2Direct_button_up"]
 [connection signal="button_up" from="Lv3Direct" to="MaptoMenu" method="_on_Lv3Direct_button_up"]

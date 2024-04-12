@@ -20,7 +20,7 @@ func _process(delta):
 	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		GlobalVariables.bulletInstanceCount = 0
-		GlobalVariables.EBulletInstanceCount = 0
+		GlobalVariables.enemyBulletInstanceCount = 0
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0
@@ -29,3 +29,5 @@ func _process(delta):
 #func _process(delta):
 #	pass
 
+#if get_tree().get_nodes_in_group("enemy").size()==0:
+#	get_tree().change_scene("res://WinScreen/WinScreen.tscn")

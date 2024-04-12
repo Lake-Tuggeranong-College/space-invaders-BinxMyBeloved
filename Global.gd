@@ -1,8 +1,8 @@
 extends Node
 var bulletInstanceCount = 0 # Keeps track of how many bullet instances are current
-var EBulletInstanceCount = 0
+var enemyBulletInstanceCount = 0
 
-var saveFile = "user://save.dat"
+#var saveFile = "user://save.dat"
 
 var scoringInformation = {
 	"currentScore": 0,

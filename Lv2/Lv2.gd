@@ -16,12 +16,12 @@ func _ready():
 	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func _process(delta):
-	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore2"])
-	if "3200" in str(GlobalVariables.scoringInformation["currentScore2"]) : 
+	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
+	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
-		GlobalVariables.scoringInformation["currentScore2"] = 0
+		GlobalVariables.scoringInformation["currentScore"] = 0
 		get_tree().change_scene("res://Map/Map.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
