@@ -5,18 +5,28 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="MenuDirect" type="Button" parent="."]
-margin_left = 423.0
-margin_top = 534.0
-margin_right = 898.0
-margin_bottom = 635.0
+margin_left = 277.0
+margin_top = 454.0
+margin_right = 575.0
+margin_bottom = 532.0
+rect_scale = Vector2( 2.6, 2.6 )
+text = "Return to the Main Menu"
 script = ExtResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+<<<<<<< HEAD
 margin_left = 581.0
 margin_top = 265.0
 margin_right = 671.0
 margin_bottom = 280.0
 rect_scale = Vector2( 10, 10 )
+=======
+margin_left = 584.0
+margin_top = 203.0
+margin_right = 622.0
+margin_bottom = 235.0
+rect_scale = Vector2( 8, 8 )
+>>>>>>> 918062809221430cc4f1e8a26b6404788869ae22
 tab_size = 7
 text = ":(
 "
