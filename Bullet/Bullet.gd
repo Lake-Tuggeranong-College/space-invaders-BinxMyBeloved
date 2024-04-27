@@ -11,10 +11,10 @@ func _physics_process(delta):
 	var collidedObject = move_and_collide(Vector2(0, -speed*delta))
 	if (collidedObject):
 		#print(collidedObject.collider.name)
-		if "Bullet" in collidedObject.collider.name:
-			collidedObject.get_collider().queue_free()
-		else:
+		if "Enemy" in collidedObject.collider.name:
 			collidedObject.get_collider().queue_free()
 			GlobalVariables.scoringInformation["currentScore"] +=50
+		if "Opp" in collidedObject.collider.name:
+			collidedObject.get_collider().queue_free()
 		queue_free()
 		GlobalVariables.bulletInstanceCount -= 1

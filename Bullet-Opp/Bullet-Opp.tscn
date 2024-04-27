@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Bullet-Enemy/Bullet-Enemy.gd" type="Script" id=1]
-[ext_resource path="res://Bullet-Enemy/Bullet-Enemy.png" type="Texture" id=2]
+[ext_resource path="res://Bullet-Opp/Bullet-Opp.gd" type="Script" id=1]
+[ext_resource path="res://Bullet-Opp/Bullet-Opp.png" type="Texture" id=2]
 [ext_resource path="res://Audio/bulletFire.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.63879, 4.41854 )
 
-[node name="Bullet-Enemy" type="KinematicBody2D"]
+[node name="Bullet-Opp" type="KinematicBody2D"]
 position = Vector2( 193.956, 142.277 )
 script = ExtResource( 1 )
 

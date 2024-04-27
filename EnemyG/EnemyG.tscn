@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://EnemyW/EnemyW.gd" type="Script" id=1]
-[ext_resource path="res://Images/8-bit-foxy-and-other-variants-v0-3icefa3pm3ja1.png" type="Texture" id=2]
+[ext_resource path="res://EnemyG/EnemyG.gd" type="Script" id=1]
+[ext_resource path="res://Images/Crying_Child.webp" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29.5, 40.9474 )
@@ -9,7 +9,7 @@ extents = Vector2( 29.5, 40.9474 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 29, 40.7869 )
 
-[node name="EnemyW" type="KinematicBody2D" groups=["Enemy"]]
+[node name="EnemyG" type="KinematicBody2D" groups=["Enemy"]]
 position = Vector2( 0.911194, -1.91614 )
 script = ExtResource( 1 )
 
@@ -18,8 +18,8 @@ position = Vector2( 1.58881, 0.685242 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1.08881, 4.91614 )
-scale = Vector2( 0.368794, 0.315789 )
+position = Vector2( 2.5888, -2.58386 )
+scale = Vector2( 0.07, 0.0655556 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]

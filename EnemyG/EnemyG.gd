@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var bullet = preload("res://Bullet-Enemy/Bullet-Enemy.tscn")
+var bullet = preload("res://Bullet-Opp/Bullet-Opp.tscn")
 
 func _ready():
 	$Area2D.connect("area_entered", self, "colliding")
@@ -20,7 +20,7 @@ func _process(delta):
 	rng.randomize()
 	var my_random_number = rng.randf_range(2.0, 30.0)
 	yield(get_tree().create_timer(my_random_number), "timeout")
-	if GlobalVariables.enemyBulletInstanceCount < 5:
+	if GlobalVariables.OppBulletInstanceCount < 5:
 		var bulletInstance = bullet.instance()
 		
 		bulletInstance.position = Vector2(global_position.x, global_position.y+20)

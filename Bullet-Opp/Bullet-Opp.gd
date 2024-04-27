@@ -4,7 +4,7 @@ var speed = 300
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GlobalVariables.enemyBulletInstanceCount += 1
+	GlobalVariables.OppBulletInstanceCount += 1
 	set_physics_process(true)
 
 func _physics_process(delta):
@@ -15,6 +15,6 @@ func _physics_process(delta):
 			pass
 		else:
 			queue_free()
-			GlobalVariables.enemyBulletInstanceCount -= 1
-			print("Enemy Bullets: ", GlobalVariables.enemyBulletInstanceCount)
+			GlobalVariables.OppBulletInstanceCount -= 1
+			print("Opp Bullets: ", GlobalVariables.OppBulletInstanceCount)
 		

@@ -17,10 +17,11 @@ func _ready():
 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
+	if get_tree().get_nodes_in_group("enemy").size() == 0:
+		#^ takes off enemy bullet limit??
 		print("Level End")
 		GlobalVariables.bulletInstanceCount = 0
-		GlobalVariables.enemyBulletInstanceCount = 0
+		GlobalVariables.OppBulletInstanceCount = 0
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0
