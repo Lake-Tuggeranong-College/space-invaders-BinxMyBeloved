@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://EnemyW/EnemiesW.gd" type="Script" id=3]
 [ext_resource path="res://Lv3/Lv3.gd" type="Script" id=4]
-[ext_resource path="res://Enemy/Enemies.gd" type="Script" id=5]
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://EnemyW/EnemyW.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Audio/MonsterMashCut.wav" type="AudioStream" id=8]
@@ -79,7 +79,7 @@ shape = SubResource( 2 )
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2( 705.16, 3.84076 )
-script = ExtResource( 5 )
+script = ExtResource( 3 )
 
 [node name="EnemyW" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( -369.392, 293.927 )
