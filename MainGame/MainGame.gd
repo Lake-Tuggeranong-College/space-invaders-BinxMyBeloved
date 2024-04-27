@@ -17,8 +17,9 @@ func _ready():
 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if get_tree().get_nodes_in_group("enemy").size() == 0:
-		#^ takes off enemy bullet limit??
+	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
+		#if get_tree().get_nodes_in_group("Enemy").size() == 0:
+		#^ takes off enemy bullet limit, trying to set to remaining enemies doesnt work (?) leave as score?
 		print("Level End")
 		GlobalVariables.bulletInstanceCount = 0
 		GlobalVariables.OppBulletInstanceCount = 0

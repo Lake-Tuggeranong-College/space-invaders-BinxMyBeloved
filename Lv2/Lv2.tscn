@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://EnemyG/EnemyG.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Audio/MonsterMashCut.wav" type="AudioStream" id=8]
+[ext_resource path="res://EnemyG/EnemiesG.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -113,7 +114,7 @@ position = Vector2( -322.392, 249.927 )
 position = Vector2( -257.392, 55.9274 )
 
 [node name="EnemyV11" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( -69.3918, 135.927 )
+position = Vector2( -66.3918, 130.927 )
 
 [node name="EnemyV12" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( 118.608, 58.9274 )
@@ -124,23 +125,27 @@ position = Vector2( 189.608, 252.927 )
 [node name="EnemyV14" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( -324.392, 147.927 )
 
-[node name="EnemyG" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -615.392, 147.927 )
+[node name="Enemies2" type="Node2D" parent="."]
+position = Vector2( 705.16, 3.84076 )
+script = ExtResource( 9 )
 
-[node name="EnemyG2" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -509.392, 147.927 )
+[node name="EnemyG" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( -615.392, 107.927 )
 
-[node name="EnemyG3" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( -561.392, 257.927 )
+[node name="EnemyG2" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( -509.392, 106.927 )
 
-[node name="EnemyG4" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 352.608, 157.927 )
+[node name="EnemyG3" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( -561.392, 205.927 )
 
-[node name="EnemyG5" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 465.608, 158.927 )
+[node name="EnemyG4" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( 354.608, 106.927 )
 
-[node name="EnemyG6" parent="Enemies" instance=ExtResource( 7 )]
-position = Vector2( 410.608, 266.927 )
+[node name="EnemyG5" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( 461.608, 106.927 )
+
+[node name="EnemyG6" parent="Enemies2" instance=ExtResource( 7 )]
+position = Vector2( 405.608, 203.927 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 5.76819, -2.23187 )
