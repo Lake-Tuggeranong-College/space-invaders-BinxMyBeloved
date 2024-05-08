@@ -17,12 +17,14 @@ func _ready():
 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
+	if "1000" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
+		GlobalVariables.bulletInstanceCount = 0
+		GlobalVariables.OppBulletInstanceCount = 0
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0
-		get_tree().change_scene("res://Map/Map.tscn")
+		get_tree().change_scene("res://Menu/Menu.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
