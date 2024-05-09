@@ -17,7 +17,7 @@ func _ready():
 
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
+	if "1400" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):

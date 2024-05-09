@@ -15,6 +15,7 @@ func _physics_process(delta):
 			collidedObject.get_collider().queue_free()
 			GlobalVariables.scoringInformation["currentScore"] +=50
 		if "Opp" in collidedObject.collider.name:
-			collidedObject.get_collider().queue_free()
-		queue_free()
-		GlobalVariables.bulletInstanceCount -= 1
+			pass
+		else:
+			queue_free()
+			GlobalVariables.bulletInstanceCount -= 1
