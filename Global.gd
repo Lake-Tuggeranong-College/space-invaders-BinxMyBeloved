@@ -9,6 +9,7 @@ var scoringInformation = {
 	"currentScore2": 0,
 	"currentScore3": 0,
 	"totalScore": 0,
+	"playerHealth": 5,
 	"currentPlayer": "User",
 	"highScore": [0,0,0],
 	"highScorePlayersName" : "Winner"
