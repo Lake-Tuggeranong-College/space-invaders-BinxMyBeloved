@@ -24,6 +24,8 @@ func _process(delta):
 		GlobalVariables.bulletInstanceCount = 0
 		GlobalVariables.OppBulletInstanceCount = 0
 		GlobalVariables.scoringInformation["currentScore"] = 0
+		GlobalVariables.scoringInformation["totalScore"] +=1600
+		print(GlobalVariables.scoringInformation["totalScore"])
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0

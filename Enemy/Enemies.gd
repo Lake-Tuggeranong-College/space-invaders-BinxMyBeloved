@@ -1,6 +1,6 @@
 extends Node2D
 
-var speed = 10
+var speed = 18
 
 func _ready():
 	set_physics_process(true)

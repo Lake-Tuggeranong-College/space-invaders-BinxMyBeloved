@@ -10,6 +10,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GlobalVariables.scoringInformation["totalScore"] >= 2500:
+		movement_speed = 300
 	if Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
