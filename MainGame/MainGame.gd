@@ -16,6 +16,7 @@ func _ready():
 	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func _process(delta):
+	$Player/Health.update_health($Player.health)
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		#if get_tree().get_nodes_in_group("Enemy").size() == 0:

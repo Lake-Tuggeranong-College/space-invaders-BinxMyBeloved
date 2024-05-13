@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://ExampleCode.gd" type="Script" id=6]
 [ext_resource path="res://Images/pixellabwarm.png" type="Texture" id=7]
 [ext_resource path="res://Audio/MonsterMashCut.wav" type="AudioStream" id=8]
+[ext_resource path="res://Images/hearts/hud_heartFull.png" type="Texture" id=9]
+[ext_resource path="res://MainGame/Health.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -185,10 +187,51 @@ autoplay = true
 
 [node name="Pixellabwarm" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 647.768, 367.768 )
+position = Vector2( 647.768, 371.768 )
 scale = Vector2( 1.3809, 1.22024 )
 texture = ExtResource( 7 )
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 22.0
+margin_top = 478.0
+margin_right = 97.0
+margin_bottom = 731.0
+script = ExtResource( 10 )
+
+[node name="1" type="TextureRect" parent="HBoxContainer"]
+margin_right = 75.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="2" type="TextureRect" parent="HBoxContainer"]
+margin_top = 49.0
+margin_right = 75.0
+margin_bottom = 94.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="3" type="TextureRect" parent="HBoxContainer"]
+margin_top = 98.0
+margin_right = 75.0
+margin_bottom = 143.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="4" type="TextureRect" parent="HBoxContainer"]
+margin_top = 147.0
+margin_right = 75.0
+margin_bottom = 192.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="5" type="TextureRect" parent="HBoxContainer"]
+margin_top = 196.0
+margin_right = 75.0
+margin_bottom = 241.0
+texture = ExtResource( 9 )
+stretch_mode = 3

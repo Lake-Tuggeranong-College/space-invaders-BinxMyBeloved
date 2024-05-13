@@ -6,7 +6,7 @@ func _ready():
 	set_process(true)
 	set_physics_process(true)
 	pass # replace with function body
-
+export (int) var health = 5
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -32,3 +32,7 @@ func _physics_process(delta):
 		if position.y < 640:
 			move_and_collide(Vector2(0, movement_speed * delta))
 
+func reduceHealth():
+	health -= 1
+	if health == 0:
+		get_tree().change_scene("res://Menu/Menu.tscn")
