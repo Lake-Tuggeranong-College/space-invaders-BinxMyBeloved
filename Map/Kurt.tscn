@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/Kurt-Angle-Stare-meme-89148o.jpg" type="Texture" id=1]
+[ext_resource path="res://Map/Kurt.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Kurt" type="Sprite" parent="."]
+position = Vector2( 639.5, 360 )
+scale = Vector2( 0.498441, 0.501393 )
+texture = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -1.0
+margin_top = -15.0
+margin_right = 241.0
+margin_bottom = 35.0
+rect_scale = Vector2( 1.7, 1.7 )
+text = "\"i have made a severe and continous"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+margin_left = 13.0
+margin_top = 41.0
+margin_right = 167.0
+margin_bottom = 66.0
+rect_scale = Vector2( 1.7, 1.7 )
+text = "lapse in my judgement\""
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]

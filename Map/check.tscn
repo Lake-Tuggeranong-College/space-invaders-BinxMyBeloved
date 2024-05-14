@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Map/MenuDirect.gd" type="Script" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 270.0
+margin_top = 233.0
+margin_right = 559.0
+margin_bottom = 276.0
+rect_scale = Vector2( 3, 3 )
+text = "Looks like you are'nt ready to progress yet!
+Come back later"
+
+[node name="Button" type="Button" parent="."]
+margin_left = 481.0
+margin_top = 355.0
+margin_right = 594.0
+margin_bottom = 389.0
+rect_scale = Vector2( 3, 3 )
+text = "Ok"
+script = ExtResource( 1 )
+
+[connection signal="button_up" from="Button" to="Button" method="_on_Button_button_up"]
