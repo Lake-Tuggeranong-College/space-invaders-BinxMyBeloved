@@ -27,3 +27,11 @@ func _on_Lv3Direct_button_up():
 
 	if Input.is_action_pressed("ui_cancel"):
 		get_tree().change_scene("res://Menu/Menu.tscn")
+
+
+func _on_Lv4Direct_button_up():
+	get_tree().change_scene("res://Lv4/Lv4.tscn")
+
+
+func _on_Lv5Direct_button_up():
+	get_tree().change_scene("res://Lv5/Lv5.tscn")

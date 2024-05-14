@@ -43,4 +43,6 @@ script = ExtResource( 2 )
 
 [connection signal="button_up" from="VBoxContainer/Lv2Direct" to="VBoxContainer/MaptoMenu" method="_on_Lv2Direct_button_up"]
 [connection signal="button_up" from="VBoxContainer/Lv3Direct" to="VBoxContainer/MaptoMenu" method="_on_Lv3Direct_button_up"]
+[connection signal="button_up" from="VBoxContainer/Lv4Direct" to="VBoxContainer/MaptoMenu" method="_on_Lv4Direct_button_up"]
+[connection signal="button_up" from="VBoxContainer/Lv5Direct" to="VBoxContainer/MaptoMenu" method="_on_Lv5Direct_button_up"]
 [connection signal="button_down" from="VBoxContainer/MaptoMenu" to="VBoxContainer/MaptoMenu" method="_on_MaptoMenu_button_down"]

@@ -1,6 +1,6 @@
 extends Control
 
-export(int) var CountdownMax = 90
+export(int) var CountdownMax = 30
 var currentTimer
 
 # Called when the node enters the scene tree for the first time.
@@ -16,24 +16,19 @@ func _ready():
 	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func _process(delta):
-	$Player/health.update_health($Player.health)
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
-		#if get_tree().get_nodes_in_group("Enemy").size() == 0:
-		#^ takes off enemy bullet limit, trying to set to remaining enemies doesnt work (?) leave as score?
+	if "1400" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		print("Level End")
 		GlobalVariables.bulletInstanceCount = 0
 		GlobalVariables.OppBulletInstanceCount = 0
 		GlobalVariables.scoringInformation["currentScore"] = 0
-		GlobalVariables.scoringInformation["totalScore"] +=1
+		GlobalVariables.scoringInformation["totalScore"] +=1400
 		print(GlobalVariables.scoringInformation["totalScore"])
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0
-		get_tree().change_scene("res://Menu/Menu.tscn")
+		get_tree().change_scene("res://Map/Map.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-#if get_tree().get_nodes_in_group("enemy").size()==0:
-#	get_tree().change_scene("res://WinScreen/WinScreen.tscn")
