@@ -13,8 +13,10 @@ func _physics_process(delta):
 		#print(collidedObject.collider.name)
 		if "Enemy" in collidedObject.collider.name:
 			pass
-		#if "Player" in collidedObject.collider.name:
-			#collidedObject.collider.reduceHealth()
+		elif "Player" in collidedObject.collider.name:
+			#$Player.reduceHealth()
+			collidedObject.collider.reduceHealth()
+			queue_free()
 		else:
 			queue_free()
 			GlobalVariables.OppBulletInstanceCount -= 1
