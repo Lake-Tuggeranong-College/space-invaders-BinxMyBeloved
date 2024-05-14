@@ -195,43 +195,43 @@ texture = ExtResource( 7 )
 stream = ExtResource( 8 )
 autoplay = true
 
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 22.0
-margin_top = 478.0
-margin_right = 97.0
-margin_bottom = 731.0
+[node name="Health" type="VBoxContainer" parent="."]
+margin_left = 27.7682
+margin_top = 475.768
+margin_right = 80.7682
+margin_bottom = 716.768
 script = ExtResource( 10 )
 
-[node name="1" type="TextureRect" parent="HBoxContainer"]
-margin_right = 75.0
+[node name="1" type="TextureRect" parent="Health"]
+margin_right = 53.0
 margin_bottom = 45.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
-[node name="2" type="TextureRect" parent="HBoxContainer"]
+[node name="2" type="TextureRect" parent="Health"]
 margin_top = 49.0
-margin_right = 75.0
+margin_right = 53.0
 margin_bottom = 94.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
-[node name="3" type="TextureRect" parent="HBoxContainer"]
+[node name="3" type="TextureRect" parent="Health"]
 margin_top = 98.0
-margin_right = 75.0
+margin_right = 53.0
 margin_bottom = 143.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
-[node name="4" type="TextureRect" parent="HBoxContainer"]
+[node name="4" type="TextureRect" parent="Health"]
 margin_top = 147.0
-margin_right = 75.0
+margin_right = 53.0
 margin_bottom = 192.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
-[node name="5" type="TextureRect" parent="HBoxContainer"]
+[node name="5" type="TextureRect" parent="Health"]
 margin_top = 196.0
-margin_right = 75.0
+margin_right = 53.0
 margin_bottom = 241.0
 texture = ExtResource( 9 )
 stretch_mode = 3

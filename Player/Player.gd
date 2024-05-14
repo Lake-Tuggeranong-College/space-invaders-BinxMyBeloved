@@ -13,7 +13,9 @@ func _process(delta):
 	if GlobalVariables.scoringInformation["totalScore"] >= 3:
 		movement_speed = 300
 	if GlobalVariables.scoringInformation["totalScore"] <= 3:
-		reduceHealth()
+		# This was causing the players health to drop extremely quickly.
+		#reduceHealth()
+		pass
 	if Input.is_action_just_pressed("fire"):
 		if GlobalVariables.bulletInstanceCount < 3:
 			var bulletInstance = bulletSource.instance()
