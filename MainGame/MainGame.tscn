@@ -30,24 +30,64 @@ margin_bottom = 40.0
 script = ExtResource( 6 )
 
 [node name="Countdown" type="Label" parent="HUD"]
-margin_top = 13.0
-margin_bottom = 27.0
+margin_top = 113.0
+margin_bottom = 127.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CurrentScoreLabel" type="Label" parent="HUD"]
 margin_left = 4.0
-margin_top = 13.0
+margin_top = 113.0
 margin_right = 90.0
-margin_bottom = 27.0
+margin_bottom = 127.0
 text = "Current Score"
 
 [node name="CurrentScore" type="Label" parent="HUD"]
 margin_left = 94.0
-margin_top = 13.0
+margin_top = 113.0
 margin_right = 94.0
-margin_bottom = 27.0
+margin_bottom = 127.0
+
+[node name="Health" type="VBoxContainer" parent="HUD"]
+margin_left = 98.0
+margin_right = 151.0
+margin_bottom = 241.0
+script = ExtResource( 10 )
+
+[node name="1" type="TextureRect" parent="HUD/Health"]
+margin_right = 53.0
+margin_bottom = 45.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="2" type="TextureRect" parent="HUD/Health"]
+margin_top = 49.0
+margin_right = 53.0
+margin_bottom = 94.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="3" type="TextureRect" parent="HUD/Health"]
+margin_top = 98.0
+margin_right = 53.0
+margin_bottom = 143.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="4" type="TextureRect" parent="HUD/Health"]
+margin_top = 147.0
+margin_right = 53.0
+margin_bottom = 192.0
+texture = ExtResource( 9 )
+stretch_mode = 3
+
+[node name="5" type="TextureRect" parent="HUD/Health"]
+margin_top = 196.0
+margin_right = 53.0
+margin_bottom = 241.0
+texture = ExtResource( 9 )
+stretch_mode = 3
 
 [node name="Border_Left" type="Area2D" parent="." groups=["left"]]
 position = Vector2( -1.53629, 369.479 )
@@ -194,44 +234,3 @@ texture = ExtResource( 7 )
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
-
-[node name="HBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 22.0
-margin_top = 478.0
-margin_right = 97.0
-margin_bottom = 731.0
-script = ExtResource( 10 )
-
-[node name="1" type="TextureRect" parent="HBoxContainer"]
-margin_right = 75.0
-margin_bottom = 45.0
-texture = ExtResource( 9 )
-stretch_mode = 3
-
-[node name="2" type="TextureRect" parent="HBoxContainer"]
-margin_top = 49.0
-margin_right = 75.0
-margin_bottom = 94.0
-texture = ExtResource( 9 )
-stretch_mode = 3
-
-[node name="3" type="TextureRect" parent="HBoxContainer"]
-margin_top = 98.0
-margin_right = 75.0
-margin_bottom = 143.0
-texture = ExtResource( 9 )
-stretch_mode = 3
-
-[node name="4" type="TextureRect" parent="HBoxContainer"]
-margin_top = 147.0
-margin_right = 75.0
-margin_bottom = 192.0
-texture = ExtResource( 9 )
-stretch_mode = 3
-
-[node name="5" type="TextureRect" parent="HBoxContainer"]
-margin_top = 196.0
-margin_right = 75.0
-margin_bottom = 241.0
-texture = ExtResource( 9 )
-stretch_mode = 3
