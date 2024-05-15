@@ -19,7 +19,7 @@ func _process(delta):
 	# The name of the node ($Health) was incorrect
 	$Health.update_health($Player.health)
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
-	if "1600" in str(GlobalVariables.scoringInformation["currentScore"]) : 
+	if "3200" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		#if get_tree().get_nodes_in_group("Enemy").size() == 0:
 		#^ takes off enemy bullet limit, trying to set to remaining enemies doesnt work (?) leave as score?
 		print("Level End")

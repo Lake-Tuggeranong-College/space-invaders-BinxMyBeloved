@@ -2,7 +2,7 @@ extends Node
 
 
 func _ready():
-	pass 
+	pass
 
 func _on_MaptoMenu_button_down():
 	get_tree().change_scene("res://Menu/Menu.tscn")

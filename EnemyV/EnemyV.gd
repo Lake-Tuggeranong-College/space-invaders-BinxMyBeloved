@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var bullet = preload("res://Bullet-Opp/Bullet-Opp.tscn")
+var bullet = preload("res://Bullet-OppV/Bullet-OppV.tscn")
 
 func _ready():
 	$Area2D.connect("area_entered", self, "colliding")

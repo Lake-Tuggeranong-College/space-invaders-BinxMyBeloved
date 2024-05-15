@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Audio/MonsterMashCut.wav" type="AudioStream" id=8]
 [ext_resource path="res://Images/hearts/hud_heartFull.png" type="Texture" id=9]
 [ext_resource path="res://MainGame/Health.gd" type="Script" id=10]
+[ext_resource path="res://EnemyW/EnemyW.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -64,7 +65,7 @@ position = Vector2( -5.37704, -0.768158 )
 shape = SubResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 642.94, 669.056 )
+position = Vector2( 631.768, 607.768 )
 
 [node name="Border_Top" type="KinematicBody2D" parent="." groups=["top"]]
 position = Vector2( 646.934, -31.955 )
@@ -180,6 +181,102 @@ position = Vector2( -579.789, 404.497 )
 [node name="Enemy32" parent="Enemies" instance=ExtResource( 3 )]
 position = Vector2( -472.219, 404.428 )
 
+[node name="EnemyW" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -590.481, -120.989 )
+
+[node name="EnemyW2" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -477.481, -120.989 )
+
+[node name="EnemyW3" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -365.481, -124.989 )
+
+[node name="EnemyW4" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -259.481, -124.989 )
+
+[node name="EnemyW5" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -153.481, -125.989 )
+
+[node name="EnemyW6" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -49.4806, -124.989 )
+
+[node name="EnemyW7" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 65.5194, -125.989 )
+
+[node name="EnemyW8" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 180.519, -124.989 )
+
+[node name="EnemyW9" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -424.392, -241.073 )
+
+[node name="EnemyW10" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -317.392, -243.073 )
+
+[node name="EnemyW11" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -205.392, -244.073 )
+
+[node name="EnemyW12" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -95.3918, -242.073 )
+
+[node name="EnemyW13" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 13.6082, -243.073 )
+
+[node name="EnemyW14" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 130.608, -241.073 )
+
+[node name="EnemyW15" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 237.608, -240.073 )
+
+[node name="EnemyW16" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 341.608, -239.073 )
+
+[node name="EnemyW17" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -595.481, -353.989 )
+
+[node name="EnemyW18" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -488.481, -354.989 )
+
+[node name="EnemyW19" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -381.481, -354.989 )
+
+[node name="EnemyW20" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -263.481, -355.989 )
+
+[node name="EnemyW21" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -151.481, -356.989 )
+
+[node name="EnemyW22" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -44.4806, -354.989 )
+
+[node name="EnemyW23" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 69.5194, -356.989 )
+
+[node name="EnemyW24" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 178.519, -354.989 )
+
+[node name="EnemyW25" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -437.481, -470.989 )
+
+[node name="EnemyW26" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -321.481, -470.989 )
+
+[node name="EnemyW27" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -208.481, -471.989 )
+
+[node name="EnemyW28" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( -100.481, -472.989 )
+
+[node name="EnemyW29" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 10.5194, -471.989 )
+
+[node name="EnemyW30" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 124.519, -472.989 )
+
+[node name="EnemyW31" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 229.519, -472.989 )
+
+[node name="EnemyW32" parent="Enemies" instance=ExtResource( 11 )]
+position = Vector2( 330.519, -474.989 )
+
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 5.76819, -2.23187 )
 stream = ExtResource( 1 )
@@ -187,7 +284,7 @@ autoplay = true
 
 [node name="Pixellabwarm" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( 647.768, 371.768 )
+position = Vector2( 632.768, 360.768 )
 scale = Vector2( 1.3809, 1.22024 )
 texture = ExtResource( 7 )
 
@@ -196,42 +293,42 @@ stream = ExtResource( 8 )
 autoplay = true
 
 [node name="Health" type="VBoxContainer" parent="."]
-margin_left = 27.7682
-margin_top = 475.768
-margin_right = 80.7682
-margin_bottom = 716.768
+margin_left = 23.0
+margin_top = 389.0
+margin_right = 81.0
+margin_bottom = 712.0
 script = ExtResource( 10 )
 
 [node name="1" type="TextureRect" parent="Health"]
-margin_right = 53.0
+margin_right = 58.0
 margin_bottom = 45.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
 [node name="2" type="TextureRect" parent="Health"]
 margin_top = 49.0
-margin_right = 53.0
+margin_right = 58.0
 margin_bottom = 94.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
 [node name="3" type="TextureRect" parent="Health"]
 margin_top = 98.0
-margin_right = 53.0
+margin_right = 58.0
 margin_bottom = 143.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
 [node name="4" type="TextureRect" parent="Health"]
 margin_top = 147.0
-margin_right = 53.0
+margin_right = 58.0
 margin_bottom = 192.0
 texture = ExtResource( 9 )
 stretch_mode = 3
 
 [node name="5" type="TextureRect" parent="Health"]
 margin_top = 196.0
-margin_right = 53.0
+margin_right = 58.0
 margin_bottom = 241.0
 texture = ExtResource( 9 )
 stretch_mode = 3
