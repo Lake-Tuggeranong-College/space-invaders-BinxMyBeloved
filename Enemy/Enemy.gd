@@ -5,15 +5,6 @@ var bullet = preload("res://Bullet-Opp/Bullet-Opp.tscn")
 func _ready():
 	$Area2D.connect("area_entered", self, "colliding")
 
-# Called when the node enters the scene tree for the first time.
-#func _colliding(area):
-	#if area.is_in_group("right"):
-		#get_parent().global_position.y =+ 10
-		#get_parent().speed = -200
-	#if area.is_in_group("left"):
-		#get_parent().global_position.y += 10
-		#get_parent().speed = 200
-
 func _process(delta):
 #	while(true):
 	var rng = RandomNumberGenerator.new()

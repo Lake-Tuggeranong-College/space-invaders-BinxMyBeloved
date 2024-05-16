@@ -3,7 +3,6 @@ extends Control
 export(int) var CountdownMax2 = 60
 var currentTimer2
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	currentTimer2 = CountdownMax2
 	$HUD/Countdown.text = str(currentTimer2)
@@ -16,19 +15,15 @@ func _ready():
 	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func _process(delta):
+	$Health.update_health($Player.health)
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 	if "1800" in str(GlobalVariables.scoringInformation["currentScore"]) : 
-		print("Level End")
 		GlobalVariables.bulletInstanceCount = 0
 		GlobalVariables.OppBulletInstanceCount = 0
 		GlobalVariables.scoringInformation["currentScore"] = 0
 		GlobalVariables.scoringInformation["totalScore"] +=1
-		print(GlobalVariables.scoringInformation["totalScore"])
 		get_tree().change_scene("res://WinScreen/WinScreen.tscn")
 	if Input.is_action_pressed("ui_cancel"):
 		GlobalVariables.scoringInformation["currentScore"] = 0
 		get_tree().change_scene("res://Map/Map.tscn")
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
