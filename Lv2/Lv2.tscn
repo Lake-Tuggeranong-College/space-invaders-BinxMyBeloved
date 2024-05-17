@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Audio/backgroundMusic.wav" type="AudioStream" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Images/Graveyardwarmed.png" type="Texture" id=10]
 [ext_resource path="res://Enemy/EnemyR.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Images/hearts/hud_heartFull.png" type="Texture" id=13]
+[ext_resource path="res://MainGame/Health.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9622, 380.576 )
@@ -212,3 +214,37 @@ show_behind_parent = true
 position = Vector2( 671.268, 359.331 )
 scale = Vector2( 1.41332, 1.48267 )
 texture = ExtResource( 10 )
+
+[node name="Health" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 14 )
+
+[node name="1" type="TextureRect" parent="Health"]
+margin_right = 53.0
+margin_bottom = 45.0
+texture = ExtResource( 13 )
+
+[node name="2" type="TextureRect" parent="Health"]
+margin_left = 57.0
+margin_right = 110.0
+margin_bottom = 45.0
+texture = ExtResource( 13 )
+
+[node name="3" type="TextureRect" parent="Health"]
+margin_left = 114.0
+margin_right = 167.0
+margin_bottom = 45.0
+texture = ExtResource( 13 )
+
+[node name="4" type="TextureRect" parent="Health"]
+margin_left = 171.0
+margin_right = 224.0
+margin_bottom = 45.0
+texture = ExtResource( 13 )
+
+[node name="5" type="TextureRect" parent="Health"]
+margin_left = 228.0
+margin_right = 281.0
+margin_bottom = 45.0
+texture = ExtResource( 13 )

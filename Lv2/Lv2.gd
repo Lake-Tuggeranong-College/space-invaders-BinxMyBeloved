@@ -15,8 +15,8 @@ func _ready():
 	get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func _process(delta):
-	$Health.update_health($Player.health)
-	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
+	#if GlobalVariables.Player:
+	GlobalVariables.update_variables()
 	if "1800" in str(GlobalVariables.scoringInformation["currentScore"]) : 
 		GlobalVariables.bulletInstanceCount = 0
 		GlobalVariables.OppBulletInstanceCount = 0
