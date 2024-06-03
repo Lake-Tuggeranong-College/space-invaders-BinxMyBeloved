@@ -36,6 +36,8 @@ func _physics_process(delta):
 	if Input. is_action_pressed("ui_down"):
 		if position.y < 640:
 			move_and_collide(Vector2(0, movement_speed * delta))
+	if health == 0:
+		get_tree().change_scene("res://LoseScreen/LoseScreen.tscn")
 
 func reduceHealth():
 	health -= 1
